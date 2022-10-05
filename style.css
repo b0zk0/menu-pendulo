@@ -351,6 +351,10 @@ body {
 	width: 50%;
 }
 
+.w-30 {
+	width: 30%;
+}
+
 .nowrap-rz {
 	white-space: nowrap;
 }
