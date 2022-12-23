@@ -1283,16 +1283,27 @@ a.nav-link {
 
 @media all and (min-width: 0px) and (max-width: 500px) {
 	a.nav-link {
-		font-size: 2em;
+		font-size: 1.6em;
 	}
 
-	.nav-link {
-		border-radius: 10px;
-		margin-bottom: 10px;
+	.nav-pills .nav-link {
+		border-radius: 10px 10px 0 0;
+		/* margin-bottom: 10px; */
+		margin-right: 0px;
 	}
 
 	.nav>li {
-		width: 30%;
+		width: 20%;
+	}
+
+	.nav>li>a {
+		position: relative;
+		display: block;
+		padding: 10px 5px;
+	}
+
+	.nav-pills>li+li {
+		margin-left: 0px;
 	}
 
 	.logo-1 {
@@ -1302,6 +1313,10 @@ a.nav-link {
 	#menu-items {
 		margin-top: 10px;
 		margin-bottom: 10px;
+	}
+
+	.beeg {
+		line-height: 12px;
 	}
 }
 
