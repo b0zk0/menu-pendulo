@@ -26,8 +26,6 @@ body {
 	margin: 40px 0;
 }
 
-
-
 .buttons_margin {
 	
 	margin: 25px 0;
@@ -434,6 +432,10 @@ body {
 	align-items: center;
 }
 
+.items-baseline {
+	align-items: baseline;
+}
+
 .center-center {
 	display: flex;
 	vertical-align: middle;
@@ -612,7 +614,6 @@ h1 {
 	}
 }
 
-
 .ham {
 	z-index: 3;
 	position: absolute;
@@ -620,6 +621,14 @@ h1 {
 	right: 0;
 	margin: 2em 1em;
 	text-align: right;
+}
+
+.logo-img {
+	display: block;
+	width: 220px;
+	height: 220px;
+	position: inherit;
+	z-index: 5;
 }
 
 .logo {
@@ -639,9 +648,9 @@ h1 {
 
 .logo-1 {
 	display: block;
-	float: left;
-	width: 220px;
-	margin: 0 auto;
+	/* float: left; */
+	/* width: 220px; */
+	/* margin: 0 auto; */
 	opacity: .85;
 }
 
@@ -1154,7 +1163,6 @@ a.not-under:hover {
 	font-family: 'black';
 }
 
-
 body.bg-cap {
 	background-image: url(https://pendulo.com/archivos/papel.jpg);
 	background-repeat: repeat;
@@ -1252,7 +1260,7 @@ a.nav-link {
 /*TABS*/
 
 .tab-content {
-	background-color: #fff;
+	background-color: #EEE7DC;
 }
 
 .nav-link {
@@ -1267,7 +1275,7 @@ a.nav-link {
 .nav-link.active,
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-	background-color: #fff !important;
+	background-color: #EEE7DC !important;
 	color: #543b2a;
 }
 
