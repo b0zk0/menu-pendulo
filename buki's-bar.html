@@ -1,0 +1,369 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+<style type="text/css">
+    .mn-b {
+        background-image: url(https://pendulo.com/archivos/fondo-bukowski.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .row {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .title {
+        display: none !important;
+    }
+
+    h1.titulo {
+        color: #FFEFD9;
+        font-family: 'Roboto Slab', serif;
+        text-transform: none !important;
+        font-size: 25px;
+        font-weight: 600;
+        text-align: left;
+        margin-bottom: 1px;
+    }
+
+    .black-text {
+        color: #454545;
+    }
+
+    .red-text {
+        color: #665449;
+        font-family: 'Roboto Slab', serif;
+        color: #311D10;
+        font-weight: bold;
+    }
+
+    .cont {
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    .cont img {
+        float: none !important;
+        border: none !important;
+        margin: 0 auto;
+        display: block
+    }
+
+    img.pleca {
+        max-height: 28px;
+        margin-left: 0;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .flex-column {
+        flex-direction: column !important;
+    }
+
+    .justify-content-start {
+        justify-content: start !important;
+    }
+
+    .justify-content-end {
+        justify-content: end !important;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .justify-content-between {
+        justify-content: space-between !important;
+    }
+
+    .align-items-center {
+        align-items: center !important;
+    }
+
+    .align-items-end {
+        align-items: end !important;
+    }
+
+    .title-head {
+        width: 90%;
+        margin-bottom: 40px !important;
+    }
+
+    .title-head-sm {
+        display: none !important;
+    }
+
+    .foot {
+        margin: 30px auto;
+    }
+
+    .title-foot {
+        width: 90%;
+    }
+
+    .title-foot-sm {
+        display: none !important;
+    }
+
+    .especialidad {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .platillo {
+        text-align: left;
+        font-size: 15px !important;
+        width: 100%;
+        margin: 10px auto;
+        line-height: 1.4em !important;
+    }
+
+    .name-wrap {
+        border-bottom: 2.5px solid #625449;
+    }
+
+    .name-platillo {
+        height: 23px;
+        width: auto !important;
+        margin-left: 0 !important;
+    }
+
+    .card-img {
+        margin-bottom: 20px;
+    }
+
+    .foto-platillo {
+        width: 100%;
+    }
+
+    .precio-platillo {
+        width: 18% !important;
+        margin: 0 -10px -50px !important;
+        z-index: 1;
+    }
+
+    .row-especial {
+        height: 450px;
+    }
+
+    .sucursales {
+        height: 100%;
+        justify-content: center;
+    }
+
+    .sucursales img {
+        width: 70%;
+    }
+
+    .sucursales p {
+        text-align: center;
+    }
+
+    /*MEDIA QUARRIES*/
+    @media only screen and (max-width: 500px) {
+        .cont {
+            width: 100%;
+            padding: 30px 0;
+        }
+
+        .title-head {
+            display: none;
+        }
+
+        .title-head-sm {
+            display: block;
+            width: 90%;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .title-foot {
+            display: none;
+        }
+
+        .title-foot-sm {
+            display: block;
+            width: 90%;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .name-platillo {
+            height: 23px;
+        }
+
+        .card-img {
+            margin-bottom: 15px;
+        }
+
+        .precio-platillo {
+            width: 25%;
+            margin: 0 -15px -50px !important;
+        }
+
+        .platillo {
+            font-size: 1em !important;
+        }
+
+        .row-especial {
+            height: auto;
+        }
+
+        .sucursales img {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 501px) and (max-width: 767px) {
+        .cont {
+            width: 90%;
+            margin: auto;
+        }
+
+        .title-head {
+            display: none !important;
+        }
+        
+        .title-foot {
+            display: none !important;
+        }
+
+        .title-foot-sm {
+            display: block !important;
+            width: 90%;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .name-platillo {
+            height: 30px;
+        }
+
+        .card-img {
+            margin-bottom: 20px;
+        }
+
+        .precio-platillo {
+            width: 20%;
+            margin: 0 -15px -50px !important;
+        }
+
+        .especialidad {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .platillo {
+            font-size: 1em !important;
+        }
+
+        .sucursales img {
+            width: 80%;
+        }
+
+        .row-especial {
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .darkplace {
+            color: #00000000;
+        }
+    }
+</style>
+<div class="cont mn-b">
+    <!--TITULO-->
+    <div id="logo" class="row">
+        <div class="col-sm-12">
+            <img src="https://pendulo.com/archivos/logo-bukowski-bar.png" alt="Logo Bukowski's Bar">
+        </div>
+    </div>
+
+    <!--INTRO-->
+    <div id="intro">
+        <h1 class="titulo">Pasa tardes inolvidables en nuestro Bukowski's Bar...</h1>
+        <div class="row">
+            <div id="descripcion" class="col-sm-6">
+                <p class="platillo black-text">En la sucursal de Zona Rosa se encuentra el Bar Bukowski's, un espacio que rinde culto a los bohemios escritores inspirados por el alcohol. En él, se puede degustar de una amplia gama de cocteles, vinos y botanas, rodeado de frases literarias. Además, de martes a domingo se puede disfrutar de las sesiones de jazz en vivo.</p>
+            </div>
+    
+            <div id="fotos" class="col-sm-6">
+                <div class="owl-carousel owl-theme" style="padding: 0 20px;">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--EVENTOS-->
+    <div id="eventos">
+        <h1 class="titulo">Todos nuestros eventos</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="owl-carousel owl-theme" style="padding: 0 20px;">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--RECOMENDACIONES-->
+    <div id="recomendaciones">
+        <h1 class="titulo">Te recomendamos</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="owl-carousel owl-theme" style="padding: 0 20px;">
+                    <div class="item">
+                        <a href="https://pendulo.com/especial/menu" target="blank">
+                            <img alt="" src="/archivos/aperol-mail.jpg" style="margin:0;float:none!important;" title="" />
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://pendulo.com/especial/menu" target="blank">
+                            <img alt="" src="/archivos/jugosm_mailing_pendulo.jpg" style="margin:0;float:none!important;" title="" />
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://pendulo.com/especial/menu" target="blank">
+                            <img alt="" src="/archivos/restaurantes_mailing_pendulo.jpg" style="margin:0;float:none!important;" title="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $('.owl-carousel')
+        .owlCarousel({
+            loop: true,
+            margin: 10,
+
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 2
+                }
+            }
+        })
+</script>
