@@ -1,7 +1,8 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
-<!-- https://www.cssscript.com/cover-flow-card-carousel/ -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.5/jquery.flipster.css" integrity="sha512-1l/eSXc5YqBhNGqL/j6+MmFUHOWBIeNcjhSBtE9ZXBvcG03LNZxrQwE+UuCo5vWtiTbVFaBOD9uAXj4YblOuOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.5/jquery.flipster.min.css" integrity="sha512-V+/5MWGpw2+bCdSIsyanskFA5W7m7tQxOucGv7STlkQeXlaj2YHg26U3UCq60uStT2yCWigdU7zdNSK7xKHImQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style type="text/css">
     .mn-b {
         background-image: url(https://pendulo.com/archivos/fondo-bukowski.png);
@@ -51,11 +52,12 @@
         color: #FFEFD9;
     }
 
-    .red-text {
-        color: #665449;
-        font-family: 'Roboto Slab', serif;
-        color: #311D10;
-        font-weight: bold;
+    .foto-slide {
+        padding: 0 20px;
+    }
+
+    .recomendaciones {
+        padding: 0 20px;
     }
 
     .cont {
@@ -107,25 +109,8 @@
         align-items: end !important;
     }
 
-    .title-head {
-        width: 90%;
-        margin-bottom: 40px !important;
-    }
-
-    .title-head-sm {
-        display: none !important;
-    }
-
     .foot {
         margin: 30px auto;
-    }
-
-    .title-foot {
-        width: 90%;
-    }
-
-    .title-foot-sm {
-        display: none !important;
     }
 
     .especialidad {
@@ -141,311 +126,69 @@
         line-height: 1.4em !important;
     }
 
-    .name-wrap {
-        border-bottom: 2.5px solid #625449;
-    }
-
-    .name-platillo {
-        height: 23px;
-        width: auto !important;
-        margin-left: 0 !important;
-    }
-
-    .card-img {
-        margin-bottom: 20px;
-    }
-
-    .foto-platillo {
-        width: 100%;
-    }
-
-    .precio-platillo {
-        width: 18% !important;
-        margin: 0 -10px -50px !important;
-        z-index: 1;
-    }
-
-    .row-especial {
-        height: 450px;
-    }
-
-    .sucursales {
-        height: 100%;
-        justify-content: center;
-    }
-
-    .sucursales img {
-        width: 70%;
-    }
-
-    .sucursales p {
-        text-align: center;
-    }
-
-    .slider {
-        width: 100%;
-    }
-    .slider input {
-        display: none;
-    }
-    .testimonials {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        min-height: 350px;
-        perspective: 1000px;
-        overflow: hidden;
-    }
-    .testimonials .item {
-        top: 0;
-        position: absolute;
-        box-sizing: border-box;
-        background-color: #0A0220;
-        padding: 30px;
-        width: 450px;
-        text-align: center;
-        transition: transform 0.4s;
-        -webkit-transform-style: preserve-3d;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        user-select: none;
-        cursor: pointer;
-    }
-    .testimonials .item img {
-        width: 100%;
-        border: 13px solid #3B344D;
-    }
-    .dots {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .dots label {
+    #coverflow {
         display: block;
-        height: 5px;
-        width: 5px;
-        border-radius: 50%;
-        cursor: pointer;
-        background-color: #413B52;
-        margin: 7px;
-        transition: transform 0.2s, color 0.2s;
+        overflow-x: visible;
     }
-    /* First */
-    #t-1:checked ~ .dots label[for="t-1"] {
-        transform: scale(2);
-        background-color: #fff;
-    }
-    #t-1:checked ~ .dots label[for="t-2"] {
-        transform: scale(1.5);
-    }
-    #t-1:checked ~ .testimonials label[for="t-1"] {
-        z-index: 4;
-    }
-    #t-1:checked ~ .testimonials label[for="t-2"] {
-        transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
-        z-index: 3;
-    }
-    #t-1:checked ~ .testimonials label[for="t-3"] {
-        transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
-        z-index: 2;
-    }
-    #t-1:checked ~ .testimonials label[for="t-4"] {
-        transform: translateX(900px) translateZ(-270px) rotateY(-35deg);
-        z-index: 1;
-    }
-    #t-1:checked ~ .testimonials label[for="t-5"] {
-        transform: translateX(1200px) translateZ(-360px) rotateY(-45deg);
-    }
-    #t-1:checked ~ .testimonials label[for="t-6"] {
-        transform: translateX(1200px) translateZ(-360px) rotateY(-45deg);
-    }
-    /* Second */
-    #t-2:checked ~ .dots label[for="t-1"] {
-        transform: scale(1.5);
-    }
-    #t-2:checked ~ .dots label[for="t-2"] {
-        transform: scale(2);
-        background-color: #fff;
-    }
-    #t-2:checked ~ .dots label[for="t-3"] {
-        transform: scale(1.5);
-    }
-    #t-2:checked ~ .testimonials label[for="t-1"] {
-        transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
-    }
-    #t-2:checked ~ .testimonials label[for="t-2"] {
-        z-index: 3;
-    }
-    #t-2:checked ~ .testimonials label[for="t-3"] {
-        transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
-        z-index: 2;
-    }
-    #t-2:checked ~ .testimonials label[for="t-4"] {
-        transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
-        z-index: 1;
-    }
-    #t-2:checked ~ .testimonials label[for="t-5"] {
-        transform: translateX(900px) translateZ(-270px) rotateY(-35deg);
-    }
-    #t-2:checked ~ .testimonials label[for="t-6"] {
-        transform: translateX(900px) translateZ(-270px) rotateY(-35deg);
-    }
-    /* Third */
-    #t-3:checked ~ .dots label[for="t-2"] {
-        transform: scale(1.5);
-    }
-    #t-3:checked ~ .dots label[for="t-3"] {
-        transform: scale(2);
-        background-color: #fff;
-    }
-    #t-3:checked ~ .dots label[for="t-4"] {
-        transform: scale(1.5);
-    }
-    #t-3:checked ~ .testimonials label[for="t-1"] {
-        transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
-    }
-    #t-3:checked ~ .testimonials label[for="t-2"] {
-        transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
-    }
-    #t-3:checked ~ .testimonials label[for="t-3"] {
-        z-index: 3;
-    }
-    #t-3:checked ~ .testimonials label[for="t-4"] {
-        transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
-        z-index: 2;
-    }
-    #t-3:checked ~ .testimonials label[for="t-5"] {
-        transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
-    }
-    #t-3:checked ~ .testimonials label[for="t-6"] {
-        transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
-    }
-    /* Fourth */
-    #t-4:checked ~ .dots label[for="t-3"] {
-        transform: scale(1.5);
-    }
-    #t-4:checked ~ .dots label[for="t-4"] {
-        transform: scale(2);
-        background-color: #fff;
-    }
-    #t-4:checked ~ .dots label[for="t-5"] {
-        transform: scale(1.5);
-    }
-    #t-4:checked ~ .testimonials label[for="t-1"] {
-        transform: translateX(-900px) translateZ(-270px) rotateY(35deg);
-    }
-    #t-4:checked ~ .testimonials label[for="t-2"] {
-        transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
-    }
-    #t-4:checked ~ .testimonials label[for="t-3"] {
-        transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
-        z-index: 2;
-    }
-    #t-4:checked ~ .testimonials label[for="t-4"] {
-        z-index: 3;
-    }
-    #t-4:checked ~ .testimonials label[for="t-5"] {
-        transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
-    }
-    #t-4:checked ~ .testimonials label[for="t-6"] {
-        transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
-    }
-    /* Fifth */
-    #t-5:checked ~ .dots label[for="t-4"] {
-        transform: scale(1.5);
-    }
-    #t-5:checked ~ .dots label[for="t-5"] {
-        transform: scale(2);
-        background-color: #fff;
-    }
-    #t-5:checked ~ .testimonials label[for="t-1"] {
-        transform: translateX(-1200px) translateZ(-360px) rotateY(45deg);
-    }
-    #t-5:checked ~ .testimonials label[for="t-2"] {
-        transform: translateX(-900px) translateZ(-270px) rotateY(35deg);
-        z-index: 1;
-    }
-    #t-5:checked ~ .testimonials label[for="t-3"] {
-        transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
-        z-index: 2;
-    }
-    #t-5:checked ~ .testimonials label[for="t-4"] {
-        transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
-        z-index: 3;
-    }
-    #t-5:checked ~ .testimonials label[for="t-5"] {
-        z-index: 4;
-    }
-    #t-5:checked ~ .testimonials label[for="t-6"] {
-        z-index: 4;
-    }
-    /* Sixth */
-    #t-6:checked ~ .dots label[for="t-5"] {
-        transform: scale(1.5);
-    }
-    #t-6:checked ~ .dots label[for="t-1"] {
-        transform: scale(2);
-        background-color: #fff;
-    }
-    #t-6:checked ~ .testimonials label[for="t-2"] {
-        transform: translateX(-1200px) translateZ(-360px) rotateY(45deg);
-    }
-    #t-6:checked ~ .testimonials label[for="t-3"] {
-        transform: translateX(-900px) translateZ(-270px) rotateY(35deg);
-        z-index: 1;
-    }
-    #t-6:checked ~ .testimonials label[for="t-4"] {
-        transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
-        z-index: 2;
-    }
-    #t-6:checked ~ .testimonials label[for="t-5"] {
-        transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
-        z-index: 3;
-    }
-    #t-6:checked ~ .testimonials label[for="t-6"] {
-        z-index: 4;
+
+    #coversmol {
+        display: none;
     }
 
     /*MEDIA QUARRIES*/
     @media only screen and (max-width: 500px) {
         .cont {
             width: 100%;
-            padding: 30px 0;
+            padding: 15px;
         }
 
-        .title-head {
-            display: none;
+        #titulo {
+            margin-bottom: -44px;
+            margin-top: 18px;
         }
 
-        .title-head-sm {
+        img.logo {
+            width: 80%;
+            border: none !important;
+            margin: 0;
+        }
+
+        h1.titulo {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        #fotos {
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .foto-slide {
+            padding: 0;
+        }
+
+        .recomendaciones {
+            padding: 0;
+        }
+
+        #descripcion {
+            padding: 15px;
+        }
+
+        #coverflow {
+            display: none !important;
+        }
+
+        #coversmol {
             display: block;
-            width: 90%;
-            margin-top: 10px !important;
-            margin-bottom: 10px !important;
         }
 
-        .title-foot {
-            display: none;
+        .platillo {
+            margin: 0;
         }
 
-        .title-foot-sm {
+        .row.equal {
             display: block;
-            width: 90%;
-            margin-top: 10px !important;
-            margin-bottom: 10px !important;
-        }
-
-        .name-platillo {
-            height: 23px;
-        }
-
-        .card-img {
-            margin-bottom: 15px;
-        }
-
-        .precio-platillo {
-            width: 25%;
-            margin: 0 -15px -50px !important;
         }
 
         .platillo {
@@ -465,34 +208,6 @@
         .cont {
             width: 90%;
             margin: auto;
-        }
-
-        .title-head {
-            display: none !important;
-        }
-        
-        .title-foot {
-            display: none !important;
-        }
-
-        .title-foot-sm {
-            display: block !important;
-            width: 90%;
-            margin-top: 10px !important;
-            margin-bottom: 10px !important;
-        }
-
-        .name-platillo {
-            height: 30px;
-        }
-
-        .card-img {
-            margin-bottom: 20px;
-        }
-
-        .precio-platillo {
-            width: 20%;
-            margin: 0 -15px -50px !important;
         }
 
         .especialidad {
@@ -520,27 +235,39 @@
     }
 </style>
 <!--TITULO-->
-<div id="titulo" class="row">
-    <div class="col-sm-12" style="display: flex; justify-content: center;">
-        <img src="https://pendulo.com/archivos/logo-bukowski-bar.png" class="logo" alt="Logo Bukowski's Bar">
-    </div>
+<div class="row" id="titulo">
+    <div class="col-sm-12" style="display: flex; justify-content: center;"><img alt="Logo Bukowski's Bar" class="logo"
+            src="https://pendulo.com/archivos/logo-bukowski-bar.png" /></div>
 </div>
 
-<div class="cont mn-b">    
+<div class="cont mn-b">
     <!--INTRO-->
     <div id="intro">
         <div class="row">
-            <h1 class="titulo">Pasa tardes inolvidables en nuestro Bukowski's Bar...</h1>
+            <h1 class="titulo">Pasa tardes inolvidables en nuestro Bukowski&#39;s Bar...</h1>
         </div>
+
         <div class="row equal">
-            <div id="descripcion" class="col-sm-6">
-                <p class="platillo white-text">En la sucursal de Zona Rosa se encuentra el Bar Bukowski's, un espacio que rinde culto a los bohemios escritores inspirados por el alcohol. En él, se puede degustar de una amplia gama de cocteles, vinos y botanas, rodeado de frases literarias. Además, de martes a domingo se puede disfrutar de las sesiones de jazz en vivo.</p>
+            <div class="col-sm-6" id="descripcion">
+                <p class="platillo white-text">En la sucursal de Zona Rosa se encuentra el Bar Bukowski&#39;s, un
+                    espacio que rinde culto a los bohemios escritores inspirados por el alcohol. En &eacute;l, se puede
+                    degustar de una amplia gama de cocteles, vinos y botanas, rodeado de frases literarias.
+                    Adem&aacute;s, de martes a domingo se puede disfrutar de las sesiones de jazz en vivo.</p>
             </div>
-            <div id="fotos" class="col-sm-6">
-                <div class="fotos owl-carousel owl-theme" style="padding: 0 20px;">
-                    <div class="item"><img alt="" src="/archivos/bukowski-foto1.png" style="margin:0;float:none!important;" title=""></div>
-                    <div class="item"><img alt="" src="/archivos/bukowski-foto2.png" style="margin:0;float:none!important;" title=""></div>
-                    <div class="item"><img alt="" src="/archivos/bukowski-foto3.png" style="margin:0;float:none!important;" title=""></div>
+
+            <div class="col-sm-6" id="fotos">
+                <div class="foto-slide owl-carousel owl-theme">
+                    <div class="item">
+                        <img alt="" src="/archivos/bukowski-foto1.png" style="margin:0;float:none!important;" title="" />
+                    </div>
+
+                    <div class="item">
+                        <img alt="" src="/archivos/bukowski-foto2.png" style="margin:0;float:none!important;" title="" />
+                    </div>
+
+                    <div class="item">
+                        <img alt="" src="/archivos/bukowski-foto3.png" style="margin:0;float:none!important;" title="" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -551,42 +278,42 @@
         <div class="row">
             <h1 class="titulo">Todos nuestros eventos</h1>
         </div>
+
         <div class="row">
             <div class="col-sm-12">
-                <div class="slider">
-                    <input type="radio" name="testimonial" id="t-1">
-                    <input type="radio" name="testimonial" id="t-2">
-                    <input type="radio" name="testimonial" id="t-3" checked="">
-                    <input type="radio" name="testimonial" id="t-4">
-                    <input type="radio" name="testimonial" id="t-5">
-                    <input type="radio" name="testimonial" id="t-6">
-                    <div class="testimonials">
-                        <label class="item" for="t-1">
-                            <img src="/archivos/2_barbukowskis_historias.jpg" alt="picture">
-                        </label>
-                        <label class="item" for="t-2">
-                            <img src="/archivos/3_barbukowskis_historias.jpg" alt="picture">
-                        </label>
-                        <label class="item" for="t-3">
-                            <img src="/archivos/4_barbukowskis_historias.jpg" alt="picture">
-                        </label>
-                        <label class="item" for="t-4">
-                            <img src="/archivos/5_barbukowskis_historias.jpg" alt="picture">
-                        </label>
-                        <label class="item" for="t-5">
-                            <img src="/archivos/6_barbukowskis_historias.jpg" alt="picture">
-                        </label>
-                        <label class="item" for="t-6">
-                            <img src="/archivos/7_barbukowskis_historias.jpg" alt="picture">
-                        </label>
+                <!-- COVERFLOW -->
+                <div id="coverflow">
+                    <ul class="flip-items">
+                        <li class="flip-item"><img alt="picture" src="/archivos/2_barbukowskis_historias.jpg" /></li>
+                        <li class="flip-item"><img alt="picture" src="/archivos/3_barbukowskis_historias.jpg" /></li>
+                        <li class="flip-item"><img alt="picture" src="/archivos/4_barbukowskis_historias.jpg" /></li>
+                        <li class="flip-item"><img alt="picture" src="/archivos/5_barbukowskis_historias.jpg" /></li>
+                        <li class="flip-item"><img alt="picture" src="/archivos/6_barbukowskis_historias.jpg" /></li>
+                        <li class="flip-item"><img alt="picture" src="/archivos/7_barbukowskis_historias.jpg" /></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-12" style="padding: 0;">
+                <!-- COVERSMOL -->
+                <div id="coversmol" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img alt="" src="/archivos/2_barbukowskis_historias.jpg" style="margin:0;float:none!important;" title="" />
                     </div>
-                    <div class="dots">
-                        <label for="t-1"></label>
-                        <label for="t-2"></label>
-                        <label for="t-3"></label>
-                        <label for="t-4"></label>
-                        <label for="t-5"></label>
-                        <label for="t-6"></label>
+                    <div class="item">
+                        <img alt="" src="/archivos/3_barbukowskis_historias.jpg" style="margin:0;float:none!important;" title="" />
+                    </div>
+                    <div class="item">
+                        <img alt="" src="/archivos/4_barbukowskis_historias.jpg" style="margin:0;float:none!important;" title="" />
+                    </div>
+                    <div class="item">
+                        <img alt="" src="/archivos/5_barbukowskis_historias.jpg" style="margin:0;float:none!important;" title="" />
+                    </div>
+                    <div class="item">
+                        <img alt="" src="/archivos/6_barbukowskis_historias.jpg" style="margin:0;float:none!important;" title="" />
+                    </div>
+                    <div class="item">
+                        <img alt="" src="/archivos/7_barbukowskis_historias.jpg" style="margin:0;float:none!important;" title="" />
                     </div>
                 </div>
             </div>
@@ -598,19 +325,22 @@
         <div class="row">
             <h1 class="titulo">Te recomendamos</h1>
         </div>
+
         <div class="row">
-            <div class="col-sm-12">
-                <div class="recomendaciones owl-carousel owl-theme" style="padding: 0 20px;">
+            <div class="col-sm-12" style="padding: 0;">
+                <div class="recomendaciones owl-carousel owl-theme">
                     <div class="item">
                         <a href="https://pendulo.com/especial/menu" target="blank">
                             <img alt="" src="/archivos/aperol-mail.jpg" style="margin:0;float:none!important;" title="" />
                         </a>
                     </div>
+
                     <div class="item">
                         <a href="https://pendulo.com/especial/menu" target="blank">
                             <img alt="" src="/archivos/jugosm_mailing_pendulo.jpg" style="margin:0;float:none!important;" title="" />
                         </a>
                     </div>
+
                     <div class="item">
                         <a href="https://pendulo.com/especial/menu" target="blank">
                             <img alt="" src="/archivos/restaurantes_mailing_pendulo.jpg" style="margin:0;float:none!important;" title="" />
@@ -623,6 +353,9 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.5/jquery.flipster.min.js" integrity="sha512-YPskov+TTZvojhg9iWYQKa6iRPRm8hko8GBbdV8A8KKMTwp84+jm2K+soYNx3Wf6qQhxb+kn2sjpMZwkWxnD/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
     $('.recomendaciones').owlCarousel({
         loop: true,
@@ -641,7 +374,7 @@
         }
     });
 
-    $('.fotos').owlCarousel({
+    $('.foto-slide').owlCarousel({
         loop: true,
         margin: 10,
         autoplay: true,
@@ -658,4 +391,24 @@
             }
         }
     });
+
+    $('#coversmol').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+
+    $("#coverflow").flipster();
 </script>
